@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../base/podinfo
-  - ../base/imdb
+  #- ../base/imdb
 patchesStrategicMerge:
   - values-podinfo.yaml
-  - values-imdb.yaml
+  #- values-imdb.yaml
