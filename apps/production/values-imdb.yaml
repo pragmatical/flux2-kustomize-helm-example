@@ -4,7 +4,7 @@ metadata:
   name: imdb
   namespace: imdb
 spec:
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
