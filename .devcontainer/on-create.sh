@@ -24,4 +24,4 @@ sudo tar --extract --gzip --directory /usr/local/bin --file /tmp/flux.tar.gz
 rm /tmp/flux.tar.gz
 
 # installing flux
-flux install >> "$HOME/status"
+# flux install >> "$HOME/status"

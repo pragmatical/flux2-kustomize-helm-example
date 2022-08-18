@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/vscode/devcontainers/universal:1
 
-# We intentionally use multiple layers small so that startup is faster with parallel pull
+# # We intentionally use multiple layers small so that startup is faster with parallel pull
 
 # install packages
 RUN export DEBIAN_FRONTEND=noninteractive && \
@@ -27,10 +27,7 @@ RUN VERSION=$(curl -i https://github.com/jmespath/jp/releases/latest | grep "loc
     sudo dpkg -i gh_1.10.3_linux_amd64.deb && \
     sudo rm gh_1.10.3_linux_amd64.deb
 
-RUN kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null && \
-    sudo curl -L https://github.com/fluxcd/flux/releases/download/1.14.2/fluxctl_linux_amd64 -o /usr/local/bin/fluxctl && \
-    sudo chmod +x /usr/local/bin/fluxctl && \
-    sudo apt-get install -f
+RUN kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null 
 
 # use multiple layers for updates
 RUN sudo apt-get install -y azure-cli
