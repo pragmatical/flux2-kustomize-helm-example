@@ -1,0 +1,23 @@
+{
+	"name": "FLUX2-KSTMZ-HELM",
+	"image": "ghcr.io/retaildevcrews/asb:latest",
+	"runArgs": [ "--init", "--privileged" ],
+	"overrideCommand": false,
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { },
+
+	"remoteUser": "codespace",
+
+	"forwardPorts": [],
+
+	// Install extensions
+	"extensions": [
+		"davidanson.vscode-markdownlint",
+		"gruntfuggly.todo-tree",
+		"ms-azuretools.vscode-docker",
+		"humao.rest-client"
+	],
+
+	"onCreateCommand": "/bin/bash .devcontainer/on-create.sh"
+}
