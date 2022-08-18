@@ -5,3 +5,16 @@ metadata:
   namespace: imdb
 spec:
   replicas: 1
+  template:
+    metadata:
+      labels:
+        app: imdb
+    spec:
+      containers:
+        - name: app
+          args:
+          - --in-memory
+          - --zone
+          - staging
+          - --region
+          - staging
