@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - ../base/podinfo
   - ../base/imdb
-#patchesStrategicMerge:
-#  - podinfo-values.yaml
+patchesStrategicMerge:
+  - values-podinfo.yaml
+  - values-imdb.yaml

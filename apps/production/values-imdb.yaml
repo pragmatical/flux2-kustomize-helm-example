@@ -4,4 +4,4 @@ metadata:
   name: imdb
   namespace: imdb
 spec:
-  replicas: 1
+  replicas: 3
